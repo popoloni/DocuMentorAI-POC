@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to .NET Functions",
+      "type": "coreclr",
+      "request": "attach",
+      "processId": "${command:azureFunctions.pickProcess}"
+    },
+    {
+      "name": "Expose to Internet",
+      "type": "coreclr",
+      "request": "attach",
+      "hostName": "127.0.0.1",
+      "port": 7066,
+      "preLaunchTask": "Expose debug to internet"
+    }
+  ]
+}

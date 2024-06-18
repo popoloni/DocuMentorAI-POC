@@ -1,0 +1,15 @@
+
+__azurite_db_blob__.json
+__azurite_db_blob_extent__.json
+__azurite_db_queue__.json
+__azurite_db_queue_extent__.json
+__azurite_db_table__.json
+src/custom-indexing-api/local.settings.gpt4.json.tmp
+
+./**/.venv/
+.env*
+
+# add ignore for generated result
+src/python_notebook/doc/
+
+.mono/**

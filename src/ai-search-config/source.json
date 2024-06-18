@@ -1,0 +1,19 @@
+{
+  "@odata.context": "https://<your-endpoint>.search.windows.net/$metadata#datasources/$entity",
+  "@odata.etag": "***",
+  "name": "DocuMentorAI-datasource",
+  "description": null,
+  "type": "azureblob",
+  "subtype": null,
+  "credentials": {
+    "connectionString": "DefaultEndpointsProtocol=https;AccountName=stoaoaidevutils;AccountKey=..."
+  },
+  "container": {
+    "name": "sources",
+    "query": null
+  },
+  "dataChangeDetectionPolicy": null,
+  "dataDeletionDetectionPolicy": null,
+  "encryptionKey": null,
+  "identity": null
+}

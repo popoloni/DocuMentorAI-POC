@@ -1,0 +1,62 @@
+{
+  "name": "DocuMentorAI-indexer",
+  "description": null,
+  "dataSourceName": "DocuMentorAI-datasource",
+  "skillsetName": "DocuMentorAI-skillset",
+  "targetIndexName": "DocuMentorAI-index",
+  "disabled": null,
+  "schedule": null,
+  "parameters": {
+    "batchSize": 2,
+    "maxFailedItems": -1,
+    "maxFailedItemsPerBatch": -1,
+    "base64EncodeKeys": null,
+    "configuration": {
+      "dataToExtract": "contentAndMetadata",
+      "parsingMode": "default"
+    }
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "metadata_storage_name",
+      "targetFieldName": "title",
+      "mappingFunction": null
+    }
+  ],
+  "outputFieldMappings": [
+    {
+      "sourceFieldName": "/document/code_description",
+      "targetFieldName": "code_description"
+    },
+    {
+      "sourceFieldName": "/document/code_summary",
+      "targetFieldName": "code_summary"
+    },
+    {
+      "sourceFieldName": "/document/code_dependencies",
+      "targetFieldName": "code_dependencies"
+    },
+    {
+      "sourceFieldName": "/document/code_diagram",
+      "targetFieldName": "code_diagram"
+    },
+    {
+      "sourceFieldName": "/document/title",
+      "targetFieldName": "title"
+    },
+    {
+      "sourceFieldName": "/document/content",
+      "targetFieldName": "content"
+    },
+    {
+      "sourceFieldName": "/document/vector",
+      "targetFieldName": "vector"
+    },
+    {
+      "sourceFieldName": "/document/chunk_id",
+      "targetFieldName": "chunk_id"
+    }
+  ],
+  "cache": null,
+  "encryptionKey": null
+}

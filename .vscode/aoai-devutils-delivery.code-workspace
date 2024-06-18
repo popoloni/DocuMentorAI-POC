@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "../src/custom-indexing-api",
+      "name": "Az Func - Custom Indexing Step"
+    }
+  ],
+  "settings": {
+    "debug.internalConsoleOptions": "neverOpen",
+    "azurite.location": "/tmp"
+  }
+}

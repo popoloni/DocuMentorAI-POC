@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "custom_indexing_api": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7066",
+      "launchBrowser": false
+    }
+  }
+}

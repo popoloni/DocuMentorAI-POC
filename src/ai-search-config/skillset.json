@@ -1,0 +1,72 @@
+{
+  "name": "DocuMentorAI-skillset",
+  "description": "Skillset to analyse a codebase and generate index content",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Text.AzureOpenAIEmbeddingSkill",
+      "name": "GenerateEmbeddings",
+      "description": null,
+      "context": "/document",
+      "resourceUri": "https://<your-endpoint>.openai.azure.com",
+      "apiKey": "<your-api-key>",
+      "deploymentId": "text-embedding-ada-002",
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/code_description"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "embedding",
+          "targetName": "vector"
+        }
+      ],
+      "authIdentity": null
+    },
+    {
+      "@odata.type": "#Microsoft.Skills.Custom.WebApiSkill",
+      "name": "CustomCodeExplain",
+      "description": "Custom skill to extract metadata description from the code content using gpt",
+      "context": "/document",
+      "uri": "https://<your-azurefunction-endpoint>/api/EnrichIndex",
+      "httpMethod": "POST",
+      "timeout": "PT3M50S",
+      "batchSize": 2,
+      "degreeOfParallelism": null,
+      "inputs": [
+        {
+          "name": "filename",
+          "source": "/document/title"
+        },
+        {
+          "name": "text",
+          "source": "/document/content"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "code_description",
+          "targetName": "code_description"
+        },
+        {
+          "name": "code_summary",
+          "targetName": "code_summary"
+        },
+        {
+          "name": "code_diagram",
+          "targetName": "code_diagram"
+        },
+        {
+          "name": "code_dependencies",
+          "targetName": "code_dependencies"
+        }
+      ],
+      "httpHeaders": {}
+    }
+  ],
+  "cognitiveServices": null,
+  "knowledgeStore": null,
+  "indexProjections": null,
+  "encryptionKey": null
+}

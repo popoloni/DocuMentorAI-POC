@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{033D4ADF-DD69-486D-9D01-1998EDE55EFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "custom-indexing-api", "src\custom-indexing-api\custom-indexing-api.csproj", "{0ACA298E-D7DF-417D-AF61-8282D1245401}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ACA298E-D7DF-417D-AF61-8282D1245401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACA298E-D7DF-417D-AF61-8282D1245401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACA298E-D7DF-417D-AF61-8282D1245401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACA298E-D7DF-417D-AF61-8282D1245401}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0ACA298E-D7DF-417D-AF61-8282D1245401} = {033D4ADF-DD69-486D-9D01-1998EDE55EFC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8245247A-DA2A-47C0-B9F1-C064E5263011}
+	EndGlobalSection
+EndGlobal

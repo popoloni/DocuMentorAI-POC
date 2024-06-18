@@ -1,0 +1,20 @@
+@baseUrl = "localhost"
+@port = 7071
+@resourceUri = "api/EnrichIndex"
+
+### EnrichIndex
+
+POST http://{{baseUrl}}:{{port}}/{{resourceUri}}
+Content-Type: application/json
+
+{
+    "values": [
+        {
+            "recordId" : "1",
+            "data": {
+                "text":"hello world",
+                "filename":"local.txt"
+            }
+        }
+    ]
+}
